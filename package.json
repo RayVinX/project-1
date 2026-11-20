@@ -1,0 +1,11 @@
+{
+  "name": "sawn-site",
+  "private": true,
+  "version": "1.0.0",
+  "description": "SAWN \u2014 Business Advisory & Development (bilingual EN/AR static site)",
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "preview": "node preview.mjs"
+  }
+}

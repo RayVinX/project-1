@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SAWN — Business Advisory &amp; Development</title>
+<meta name="description" content="SAWN (صَوْن) — one partner, complete business solutions. From business creation to transformation, growth and execution.">
+<meta name="theme-color" content="#22050B">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%2322050B'/%3E%3Crect x='6.5' y='6.5' width='51' height='51' fill='none' stroke='%23D6B27C' stroke-opacity='.5'/%3E%3Ctext x='32' y='45' text-anchor='middle' font-family='Georgia,serif' font-size='38' fill='%23D6B27C'%3ES%3C/text%3E%3C/svg%3E">
+<link rel="preload" as="image" href="assets/img/sawn-logo-full.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@300;400;500&family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/sawn.css?v=71">
+</head>
+<body class="is-loading">
+<a class="skip mono" href="#main" data-i18n="skip">Skip to content</a>
+
+<!-- ───────────── Opening curtain ───────────── -->
+<div class="curtain" aria-hidden="true">
+  <div class="curtain__half curtain__half--top"><div class="curtain__inner">
+    <img class="curtain__logo js-curtain-logo" src="assets/img/sawn-logo-full.png" alt="" width="1100" height="437">
+    <span class="curtain__count ltr"><span class="js-count">00</span></span>
+  </div></div>
+  <div class="curtain__half curtain__half--bot"><div class="curtain__inner">
+    <img class="curtain__logo" src="assets/img/sawn-logo-full.png" alt="" width="1100" height="437">
+    <span class="curtain__count ltr"><span class="js-count">00</span></span>
+  </div></div>
+  <span class="curtain__seam"></span>
+</div>
+
+<!-- ───────────── Background system (behind everything) ───────────── -->
+<div class="bg" aria-hidden="true">
+  <div class="ambient"></div>
+  <div class="pool pool--a"></div>
+  <div class="pool pool--b"></div>
+  <div class="pool pool--c"></div>
+  <div class="spot"></div>
+  <canvas class="bg-canvas js-bg-canvas"></canvas>
+  <div class="vignette"></div>
+</div>
+<div class="grain" aria-hidden="true"></div>
+<div class="frame" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+<div class="veil" aria-hidden="true"><img src="assets/img/sawn-logo.png" alt=""></div>
+
+<!-- ───────────── Single interactive floating logo ───────────── -->
+<button class="buddy js-buddy" type="button" data-cursor="Play" data-i18n-attr="aria-label:buddy.aria" aria-label="SAWN logo — tap to spin">
+  <span class="buddy__body js-buddy-body"><img src="assets/img/sawn-mark.png" alt="" width="320" height="312" draggable="false"></span>
+  <i class="buddy__ring js-buddy-ring" aria-hidden="true"></i>
+</button>
+
+<!-- ───────────── Corner HUD ───────────── -->
+<header class="hud">
+  <a class="hud__mark" href="#top" data-cursor="Top" data-i18n-attr="aria-label:hud.home" aria-label="SAWN — back to top">
+    <img src="assets/img/sawn-logo.png" alt="SAWN — صَوْن" width="640" height="248">
+  </a>
+  <div class="hud__tr">
+    <div class="lang mono" role="group" data-i18n-attr="aria-label:lang.label" aria-label="Language">
+      <button type="button" data-lang="en" aria-pressed="true" lang="en" data-cursor="Lang">EN</button>
+      <span class="lang__sep" aria-hidden="true">/</span>
+      <button type="button" data-lang="ar" aria-pressed="false" lang="ar" data-cursor="Lang">عربي</button>
+    </div>
+    <button class="hud__index mono" type="button" aria-expanded="false" aria-controls="menu" data-magnetic data-cursor="Open">
+      <span class="hud__index-label">Index</span>
+      <span class="hud__brk" aria-hidden="true">[</span><span class="hud__plus" aria-hidden="true"></span><span class="hud__brk" aria-hidden="true">]</span>
+    </button>
+  </div>
+  <div class="hud__chapter mono" aria-live="polite">
+    <span class="roll ltr"><span class="js-chapter-num">01</span></span><span class="hud__dim">&nbsp;/ 04 —&nbsp;</span><span class="roll"><span class="js-chapter-name">Overview</span></span>
+  </div>
+  <div class="hud__progress mono" aria-hidden="true">
+    <span class="hud__bar"><i class="js-bar"></i></span>
+  </div>
+</header>
+
+<!-- ───────────── Index overlay ───────────── -->
+<nav id="menu" class="menu" data-i18n-attr="aria-label:menu.aria" aria-label="Site index" aria-hidden="true" inert>
+  <div class="menu__grid">
+    <ol class="menu__list">
+      <li style="--i:0"><a href="#overview" data-cursor="Go"><span class="menu__n mono ltr">01</span><span class="menu__mask"><span class="menu__t" data-i18n="ch.1">Overview</span></span><span class="menu__d mono" data-i18n="menu.d1">Who we are</span></a></li>
+      <li style="--i:1"><a href="#practice" data-cursor="Go"><span class="menu__n mono ltr">02</span><span class="menu__mask"><span class="menu__t" data-i18n="ch.2">Practice</span></span><span class="menu__d mono" data-i18n="menu.d2">14 disciplines</span></a></li>
+      <li style="--i:2"><a href="#method" data-cursor="Go"><span class="menu__n mono ltr">03</span><span class="menu__mask"><span class="menu__t" data-i18n="ch.3">Method</span></span><span class="menu__d mono" data-i18n="menu.d3">How we work</span></a></li>
+      <li style="--i:3"><a href="#contact" data-cursor="Go"><span class="menu__n mono ltr">04</span><span class="menu__mask"><span class="menu__t" data-i18n="ch.4">Contact</span></span><span class="menu__d mono" data-i18n="menu.d4">Contact us</span></a></li>
+    </ol>
+    <aside class="menu__aside">
+      <div class="menu__block" style="--i:4"><span class="label" data-i18n="menu.pathways">Pathways</span><p data-i18n="menu.pathwaysList">Launch<br>Transform<br>Accelerate</p></div>
+      <div class="menu__block" style="--i:5"><span class="label" data-i18n="menu.principle">Principle</span><p data-i18n="menu.principleText"><em>From vision to execution.<br>From challenges to growth.</em></p></div>
+      <span class="menu__ar ar-word" aria-hidden="true">صَوْن</span>
+    </aside>
+  </div>
+</nav>
+
+<!-- ───────────── Cursor ───────────── -->
+<div class="cursor" aria-hidden="true">
+  <div class="cursor__ring"><i></i><span class="cursor__label mono"></span></div>
+  <div class="cursor__dot"></div>
+</div>
+
+<main id="main">
+  <span id="top"></span>
+
+  <!-- ═════════ ACT I — Monumental stage ═════════ -->
+  <section id="overview" class="stage" data-chapter="01" data-cursor="Drag">
+    <span class="hl hl--top"></span><span class="hl hl--bot"></span><span class="hl hl--v"></span>
+    <div class="stage__grid">
+      <div class="stage__meta mono">
+        <span class="stage__m1" data-i18n="hero.m1">(Est.) Business Advisory &amp; Development</span>
+        <span class="stage__m2" data-i18n="hero.m2"><b class="ar-word" lang="ar">صَوْن</b>&nbsp; <i>Ṣawn</i> — to safeguard, to preserve</span>
+        <span class="stage__m3" data-i18n="hero.m3">Launch — Transform — Accelerate</span>
+      </div>
+
+      <h1 class="stage__title" data-i18n="hero.title" data-i18n-attr="aria-label:hero.titleAria" aria-label="One partner. Complete business solutions.">
+        <span class="line" style="--i:0" aria-hidden="true"><span>One partner.</span></span>
+        <span class="line" style="--i:1" aria-hidden="true"><span><em>Complete</em></span></span>
+        <span class="line" style="--i:2" aria-hidden="true"><span>business</span></span>
+        <span class="line" style="--i:3" aria-hidden="true"><span>solutions.</span></span>
+      </h1>
+
+      <div class="stage__foot">
+        <p class="stage__lede" data-i18n="hero.lede">From business creation to transformation, growth and execution — advisory, supervision or hands-on management, shaped around what each client needs.</p>
+        <a class="stage__scroll mono" href="#about" data-cursor="Scroll"><span data-i18n="hero.scroll">Scroll</span><i></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═════════ Overview band — horizontal stage ═════════ -->
+  <section id="about" class="about" data-chapter="01">
+    <div class="hstage js-hstage">
+      <div class="hstage__sticky">
+        <div class="hstage__track js-htrack">
+          <article class="hpanel hpanel--intro">
+            <div class="hpanel__head">
+              <span class="label" data-i18n="about.label">01.1 — Who we are</span>
+              <p class="about__note" data-i18n="about.note">Each engagement is tailored to the client’s goals and priorities.</p>
+            </div>
+            <h2 class="statement split reveal" data-i18n="about.statement">Your strategic partner in business. We help entrepreneurs and organizations <em>build, improve and grow</em> — connecting strategy, operations, brand, technology and measurable results.</h2>
+          </article>
+          <article class="hpanel hpanel--pillar">
+            <span class="hpanel__ghost ltr" aria-hidden="true">I</span>
+            <span class="hpanel__n mono ltr">I.</span>
+            <div class="hpanel__foot fade reveal"><h3 data-i18n="about.vH">Vision</h3><p data-i18n="about.vP">To be a trusted partner in building efficient, sustainable businesses.</p></div>
+          </article>
+          <article class="hpanel hpanel--pillar">
+            <span class="hpanel__ghost ltr" aria-hidden="true">II</span>
+            <span class="hpanel__n mono ltr">II.</span>
+            <div class="hpanel__foot fade reveal"><h3 data-i18n="about.mH">Mission</h3><p data-i18n="about.mP">Practical solutions combining diagnosis, planning and delivery.</p></div>
+          </article>
+          <article class="hpanel hpanel--pillar">
+            <span class="hpanel__ghost ltr" aria-hidden="true">III</span>
+            <span class="hpanel__n mono ltr">III.</span>
+            <div class="hpanel__foot fade reveal"><h3 data-i18n="about.wH">Why SAWN</h3><p data-i18n="about.wP">One integrated partner — business, management, branding and technology expertise, focused on execution.</p></div>
+          </article>
+        </div>
+      <div class="hrail" aria-hidden="true">
+        <span class="hrail__count mono"><span class="ltr js-hnum">01</span><span class="hrail__tot">&nbsp;/ 04</span></span>
+        <span class="hrail__bar"><i class="js-hbar"></i></span>
+        <span class="hrail__hint mono" data-i18n="h.hint">Scroll to travel →</span>
+      </div>
+      </div>
+    </div>
+
+    <div class="marquee" data-i18n-attr="aria-label:about.values" aria-label="Values: Trust, Clarity, Accountability, Innovation">
+      <div class="marquee__track js-marquee" aria-hidden="true"></div>
+    </div>
+  </section>
+
+  <!-- ═════════ ACT II — Hairline index ═════════ -->
+  <section id="practice" class="practice" data-chapter="02">
+    <div class="wrap practice__head">
+      <span class="label" data-i18n="prac.label">02 — Service ecosystem</span>
+      <h2 class="display reveal" data-i18n="prac.title">
+        <span class="line" style="--i:0"><span>Fourteen connected</span></span>
+        <span class="line" style="--i:1"><span>areas of <em>expertise.</em></span></span>
+      </h2>
+      <div class="practice__aside fade reveal">
+        <p data-i18n="prac.aside">Integrated solutions across the business lifecycle — building new businesses from concept to operation, resolving waste and underperformance in existing companies, and strengthening brands, systems and leadership.</p>
+        <span class="mono practice__count" data-i18n="prac.count">04 Practices · 14 Disciplines</span>
+      </div>
+    </div>
+    <div class="index js-index" role="list"></div>
+  </section>
+
+  <!-- ═════════ ACT III — Kinetic manifesto ═════════ -->
+  <section id="method" class="method" data-chapter="03">
+    <div class="method__track js-method">
+      <div class="method__sticky">
+        <div class="wrap method__grid">
+          <div class="method__left">
+            <span class="label" data-i18n="meth.label">03 — How we work</span>
+            <ol class="steps js-steps">
+              <li><span class="steps__n mono ltr">01</span><span class="steps__w" data-i18n="meth.w1">Diagnose.</span><span class="steps__d" data-i18n="meth.d1">Understand the current situation, challenges and objectives.</span></li>
+              <li><span class="steps__n mono ltr">02</span><span class="steps__w" data-i18n="meth.w2">Design.</span><span class="steps__d" data-i18n="meth.d2">Define the roadmap, responsibilities and performance measures.</span></li>
+              <li><span class="steps__n mono ltr">03</span><span class="steps__w" data-i18n="meth.w3">Execute.</span><span class="steps__d" data-i18n="meth.d3">Execute solutions or supervise delivery as agreed.</span></li>
+              <li><span class="steps__n mono ltr">04</span><span class="steps__w" data-i18n="meth.w4">Measure.</span><span class="steps__d" data-i18n="meth.d4">Measure outcomes and continuously improve.</span></li>
+            </ol>
+          </div>
+          <div class="method__right">
+            <p class="manifesto js-manifesto" data-i18n="meth.manifesto">We connect strategy, operations, brand, technology and <b>measurable results.</b> Every engagement is tailored to the client’s stage and specific needs — advisory, supervision or direct implementation. We combine business, management, branding and technology expertise into one partner, and we hold ourselves to practical, measurable and <b>sustainable outcomes.</b> From vision to <b>execution.</b> From challenges to <b>growth.</b></p>
+          </div>
+        </div>
+        <div class="method__rail"><i class="js-method-bar"></i></div>
+      </div>
+    </div>
+
+    <!-- Pathways + engagement — horizontal stage -->
+    <div class="hstage js-hstage">
+      <div class="hstage__sticky">
+        <div class="hstage__track js-htrack">
+          <article class="hpanel hpanel--intro hpanel--paths">
+            <span class="label" data-i18n="path.label">03.1 — Three client pathways</span>
+            <h2 class="display display--md reveal" data-i18n="path.title">
+              <span class="line" style="--i:0"><span>Launch. Transform.</span></span>
+              <span class="line" style="--i:1"><span><em>Accelerate.</em></span></span>
+            </h2>
+          </article>
+          <article class="hpanel hpanel--path path" data-cursor="Explore">
+            <span class="hpanel__ghost ltr" aria-hidden="true">01</span>
+            <span class="path__n mono" data-i18n="path.n1">P—01</span>
+            <svg class="path__glyph" viewBox="0 0 80 80" aria-hidden="true"><path d="M10 70 L40 10 L70 70"/><path d="M22 46 H58"/><circle cx="40" cy="10" r="2.2"/></svg>
+            <h3 class="path__t"><em data-i18n="path.t1">Launch</em></h3>
+            <p data-i18n="path.d1">Create and establish a new business from scratch.</p>
+          </article>
+          <article class="hpanel hpanel--path path" data-cursor="Explore">
+            <span class="hpanel__ghost ltr" aria-hidden="true">02</span>
+            <span class="path__n mono" data-i18n="path.n2">P—02</span>
+            <svg class="path__glyph" viewBox="0 0 80 80" aria-hidden="true"><circle cx="30" cy="40" r="22"/><circle cx="50" cy="40" r="22"/><path d="M40 22 V58"/></svg>
+            <h3 class="path__t"><em data-i18n="path.t2">Transform</em></h3>
+            <p data-i18n="path.d2">Repair performance, structure and brand positioning.</p>
+          </article>
+          <article class="hpanel hpanel--path path" data-cursor="Explore">
+            <span class="hpanel__ghost ltr" aria-hidden="true">03</span>
+            <span class="path__n mono" data-i18n="path.n3">P—03</span>
+            <svg class="path__glyph" viewBox="0 0 80 80" aria-hidden="true"><path d="M10 64 L40 40 L70 64"/><path d="M10 46 L40 22 L70 46"/><path d="M10 28 L40 4 L70 28"/></svg>
+            <h3 class="path__t"><em data-i18n="path.t3">Accelerate</em></h3>
+            <p data-i18n="path.d3">Scale revenue, sales and market presence.</p>
+          </article>
+          <article class="hpanel hpanel--engage">
+            <div class="engage__head">
+              <span class="label" data-i18n="eng.label">03.2 — Engagement models</span>
+              <p class="engage__sub" data-i18n="eng.sub">Flexible support for every business — choose advisory, supervision or direct implementation.</p>
+            </div>
+            <ol class="ledger fade reveal" data-i18n="eng.rows">
+              <li><span class="mono">A</span><span class="ledger__t">Advisory</span><span class="ledger__d">Diagnosis, analysis, recommendations and action plans.</span></li>
+              <li><span class="mono">B</span><span class="ledger__t">Advisory <em>+</em> Supervision</span><span class="ledger__d">Guide and monitor the client’s team.</span></li>
+              <li><span class="mono">C</span><span class="ledger__t">End-to-End Execution</span><span class="ledger__d">Lead, implement and manage the project.</span></li>
+              <li><span class="mono">—</span><span class="ledger__t">Commercial models</span><span class="ledger__d">Project fees, retainers or agreed incentives.</span></li>
+            </ol>
+          </article>
+        </div>
+      <div class="hrail" aria-hidden="true">
+        <span class="hrail__count mono"><span class="ltr js-hnum">01</span><span class="hrail__tot">&nbsp;/ 05</span></span>
+        <span class="hrail__bar"><i class="js-hbar"></i></span>
+        <span class="hrail__hint mono" data-i18n="h.hint">Scroll to travel →</span>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═════════ Closing stage — Contact ═════════ -->
+  <section id="contact" class="contact" data-chapter="04">
+    <span class="contact__ghost" aria-hidden="true">صَوْن</span>
+    <span class="hl hl--ctop"></span>
+    <div class="wrap contact__inner">
+      <span class="label" data-i18n="con.label">04 — Contact us</span>
+      <h2 class="giant reveal" data-i18n="con.giant" data-i18n-attr="aria-label:con.giantAria" aria-label="Let’s build what’s next.">
+        <span class="line" style="--i:0" aria-hidden="true"><span class="fill" data-text="Let’s build">Let’s build</span></span>
+        <span class="line" style="--i:1" aria-hidden="true"><span class="fill fill--em" data-text="what’s next.">what’s next.</span></span>
+      </h2>
+
+      <ol class="next fade reveal" data-i18n="con.next">
+        <li><span class="mono">01</span><p>Tell us about your business idea or operational challenges.</p></li>
+        <li><span class="mono">02</span><p>Together we define the scope, timeline and engagement model.</p></li>
+        <li><span class="mono">03</span><p>From vision to execution. From challenges to growth.</p></li>
+      </ol>
+
+      <div class="reach">
+        <div class="reach__head"><span class="label" data-i18n="con.reach">Direct lines</span></div>
+        <ul class="reach__list js-reach"></ul>
+        <p class="js-sr" aria-live="polite" style="position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)"></p>
+      </div>
+    </div>
+
+    <footer class="foot wrap mono">
+      <span data-i18n="foot.1">© 2026 SAWN — <span class="ar-word">صَوْن</span></span>
+      <span data-i18n="foot.2">Business Advisory &amp; Development</span>
+      <a href="#top" data-cursor="Top" data-i18n="foot.top">Back to top ↑</a>
+    </footer>
+  </section>
+</main>
+
+<script src="assets/js/i18n.js?v=71" defer></script>
+<script src="assets/js/sawn.js?v=71" defer></script>
+</body>
+</html>
